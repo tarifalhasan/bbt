@@ -14,7 +14,7 @@ interface ClientProviderProps {
 }
 
 export const ClientProvider: React.FC<ClientProviderProps> = ({ children }) => {
-  const [headerTab, setHeader] = useState("dex");
+  const [headerTab, setHeader] = useState("nft");
 
   const value = {
     headerTab,
