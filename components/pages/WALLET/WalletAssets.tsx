@@ -7,7 +7,6 @@ import {
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
@@ -69,7 +68,6 @@ const WalletAssets = () => {
         <h2 className=" text-lg xl:text-2xl font-semibold">Assets</h2>
       </div>
       <Table>
-        <TableCaption>A list of your recent invoices.</TableCaption>
         <TableHeader>
           <TableRow>
             {THEAD.map((th, i) => (
