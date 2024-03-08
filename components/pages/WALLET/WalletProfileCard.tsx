@@ -59,14 +59,14 @@ const WalletProfileCard: React.FC<WalletProfileCardProps> = ({
             <div className="inline-flex gap-3 items-center">
               <Link
                 href={"/"}
-                className="border border-white rounded-full p-1.5"
+                className="border hover:bg-primary transition-all duration-700 border-white rounded-full p-1.5"
                 target="_blank"
               >
                 <FaTelegramPlane size={20} />
               </Link>
               <Link
                 href={"/"}
-                className="border border-white rounded-full p-1.5"
+                className="border hover:bg-primary transition-all duration-700 border-white rounded-full p-1.5"
                 target="_blank"
               >
                 <PiShareFatFill size={20} />

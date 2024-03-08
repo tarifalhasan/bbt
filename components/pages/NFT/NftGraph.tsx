@@ -36,7 +36,7 @@ const NftGraph = () => {
             </div>
           </div>
           <div className=" flex flex-col md:flex-row gap-4 pt-8 border-b pb-5 justify-between md:items-center">
-            <div className=" flex items-center gap-10 xl:gap-24">
+            <div className=" flex items-center gap-10 2xl:gap-24">
               <div className=" space-y-[1px]">
                 <h5 className=" text-xs xl:text-sm font-semibold text-gray">
                   Market Cap
@@ -47,7 +47,7 @@ const NftGraph = () => {
                   <span>0.57%</span>
                 </div>
               </div>
-              <div className=" border-l pl-10 xl:pl-24 border-border space-y-[1px]">
+              <div className=" border-l pl-10 2xl:pl-24 border-border space-y-[1px]">
                 <h5 className=" text-xs xl:text-sm font-semibold text-gray">
                   Volume 24h
                 </h5>
