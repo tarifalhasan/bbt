@@ -20,8 +20,8 @@ const config = {
     },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
+        border: "hsla(var(--border))",
+        input: "hsla(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsla(var(--background))",
         foreground: "hsla(var(--foreground))",
@@ -53,11 +53,15 @@ const config = {
           DEFAULT: "hsla(var(--card))",
           foreground: "hsla(var(--card-foreground))",
         },
+        lose: "hsla(var(--lose))",
+        gray: "hsla(var(--gray))",
+        green: "hsla(var(--green))",
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        base: "7px",
       },
       keyframes: {
         "accordion-down": {

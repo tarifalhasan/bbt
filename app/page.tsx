@@ -1,16 +1,23 @@
-import Header from "@/components/layout/Header";
-import RightSidebar from "@/components/layout/RightSidebar";
+"use client";
 import Sidebar from "@/components/layout/Sidebar";
+import DEX from "@/components/pages/DEX";
+import NFT from "@/components/pages/NFT";
+import WALLET from "@/components/pages/WALLET";
+import { useClient } from "@/contex/clientContext";
 
 export default function Home() {
+  const { headerTab, setHeader } = useClient();
   return (
-    <main className="  container  h-screen relative overflow-hidden">
-      <div className="flex absolute top-1/2  -translate-y-1/2  w-full overflow-hidden p-0  h-[calc(100vh-40px)] items-start gap-10">
+    <main className=" h-screen flex justify-center items-center ">
+      <div className="flex w-full  justify-center xl:w-[calc(100%-10px)]  overflow-hidden p-0  h-[calc(100vh-40px)] items-start gap-10">
         <Sidebar />
-        <div className="p-2  rounded-[7px] pt-[80px]  lg:pt-0 pl-0  flex-1 flex flex-col   relative  z-10 will-change-transform justify-start h-[calc(100vh-40px)] w-[1px]">
-          <Header />
-        </div>
-        <RightSidebar />
+        {headerTab === "dex" ? (
+          <DEX />
+        ) : headerTab == "nft" ? (
+          <NFT />
+        ) : (
+          <WALLET />
+        )}
       </div>
     </main>
   );
