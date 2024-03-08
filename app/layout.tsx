@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import { Sora as FontSans } from "next/font/google";
 
+import { ClientProvider } from "@/contex/clientContext";
 import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
 
@@ -19,7 +20,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           fontSans.variable
         )}
       >
-        {children}
+        <ClientProvider> {children}</ClientProvider>
       </body>
     </html>
   );
