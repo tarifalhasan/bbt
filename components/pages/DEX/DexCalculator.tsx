@@ -1,6 +1,4 @@
 "use client";
-import { Slider } from "@/components/ui/slider";
-
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -11,7 +9,9 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { Slider } from "@/components/ui/slider";
 import { cn } from "@/lib/utils";
+import g2 from "@/public/images/dex_graph_22dfdfd.png";
 import { format } from "date-fns";
 import { Calendar as CalendarIcon } from "lucide-react";
 import { LuPlusCircle } from "react-icons/lu";
@@ -32,7 +32,9 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
+import TimeChageZone from "@/components/common/TimeChageZone";
 import { zodResolver } from "@hookform/resolvers/zod";
+import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 const formSchema = z.object({
@@ -52,6 +54,7 @@ const DexCalculator = () => {
     defaultValues: {
       cryptocurrency: "BTC",
       frequency: "month",
+      sellingPercentageValue: 20,
     },
   });
 
@@ -330,7 +333,7 @@ const DexCalculator = () => {
           </form>
         </Form>
         <div className="flex-1 w-full p-4 space-y-4   h-full">
-          <div className=" max-w-[424px]">
+          <div className=" space-y-5 max-w-[424px]">
             <h2 className=" text-sm text-wrap xl:text-base font-extrabold">
               You are buying{" "}
               <span className="text-primary">
@@ -354,6 +357,80 @@ const DexCalculator = () => {
               </span>
               .
             </h2>
+            <h2 className=" text-sm text-wrap xl:text-base font-extrabold">
+              You are Sell{" "}
+              <span className="text-lose">
+                {form.getValues("sellingPercentageValue")}%
+              </span>{" "}
+              of{" "}
+              <span className="text-lose">
+                {form.getValues("cryptocurrency")}
+              </span>{" "}
+              on{" "}
+              <span className="text-lose">
+                {form.getValues("sellDate")
+                  ? format(form.getValues("sellDate"), "MMMM d, yyyy")
+                  : "August 1, 2023"}
+              </span>
+            </h2>
+            <div>
+              <ul className=" border px-4 bg-light_gray rounded-[7px]">
+                <li className="flex items-center border-b py-3 justify-between">
+                  <span className=" block text-sm font-semibold text-gray">
+                    Expected PnL %
+                  </span>
+                  <span className=" block text-sm font-semibold text-primary">
+                    1020.876%
+                  </span>
+                </li>
+                <li className="flex items-center border-b py-3 justify-between">
+                  <span className=" block text-sm font-semibold text-gray">
+                    Expected PnL (in USD)
+                  </span>
+                  <span className=" block text-sm font-semibold text-primary">
+                    $90,810.50 USD
+                  </span>
+                </li>
+                <li className="flex items-center border-b py-3 justify-between">
+                  <span className=" block text-sm font-semibold text-gray">
+                    Potential loss (in USD)
+                  </span>
+                  <span className=" block text-sm font-semibold  text-red-500">
+                    $7,823.27 USD
+                  </span>
+                </li>
+                <li className="flex items-center border-b py-3 justify-between">
+                  <span className=" block text-sm font-semibold text-gray">
+                    Average DCA Price
+                  </span>
+                  <span className=" block text-sm font-semibold text-white">
+                    $90,810.50 USD
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className=" w-full">
+            <div className="flex justify-end items-center">
+              <button className="text-base font-semibold h-[46px]  px-8 rounded-t-[7px] bg-background">
+                Price
+              </button>
+              <button className="text-base font-semibold h-[46px]  px-8 rounded-t-[7px] bg-primary text-background">
+                Chart
+              </button>
+            </div>
+            <div className=" bg-light_gray rounded-base border p-4">
+              <div className=" inline-block">
+                <TimeChageZone />
+              </div>
+              <div className=" relative overflow-hidden">
+                <Image
+                  className=" w-full block mx-auto object-contain"
+                  alt="gt"
+                  src={g2}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
