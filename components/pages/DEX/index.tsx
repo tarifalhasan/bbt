@@ -1,7 +1,9 @@
 import Header from "@/components/layout/Header";
+import { Input } from "@/components/ui/input";
 import graph from "@/public/images/dex_graph.webp";
 import Image from "next/image";
 import DexCalculator from "./DexCalculator";
+import DexProfileCard from "./DexProfileCard";
 import DexTransactions from "./DexTransactions";
 const DEX = () => {
   return (
@@ -17,7 +19,10 @@ const DEX = () => {
         </div>
       </div>
       <aside className="flex-col p-4 rounded-[7px] justify-between right-0 left-0 top-0 overflow-hidden overflow-y-auto bg-card max-w-[280px]  relative w-[calc(27%-20px)] z-50 h-full hidden xl:flex">
-        sdsds
+        <div className=" overflow-y-auto space-y-3">
+          <Input placeholder="Search" />
+          <DexProfileCard />
+        </div>
       </aside>
     </div>
   );
