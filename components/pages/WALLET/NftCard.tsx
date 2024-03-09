@@ -40,17 +40,19 @@ const NftCard: React.FC<NftCardProps> = ({ attributes, details }) => {
           <Image
             src={details.nftImage}
             alt="nft"
-            className="w-[96] h-[96px] object-cover"
+            className="w-[96] rounded h-[96px] object-cover"
             width={96}
             height={96}
             quality={80}
           />
         </div>
         <div className="col-span-7 flex flex-col justify-between">
-          <h2 className="text-sm font-semibold text-gray">
+          <h2 className=" text-xs 2xl:text-sm text-wrap font-semibold text-gray">
             {details.tokenName}
           </h2>
-          <p className="text-base font-medium text-white">{details.username}</p>
+          <p className=" text-sm 2xl:text-base text-wrap font-medium text-white">
+            {details.username}
+          </p>
         </div>
       </div>
       <NftDetailsModal

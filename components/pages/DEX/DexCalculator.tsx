@@ -431,6 +431,11 @@ const DexCalculator = () => {
                 />
               </div>
             </div>
+            <div className=" flex pt-3 justify-end">
+              <Button className=" px-5 bg-[#44FF9A] hover:bg-[#44FF9A]/50">
+                Execute
+              </Button>
+            </div>
           </div>
         </div>
       </div>

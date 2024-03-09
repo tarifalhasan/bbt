@@ -8,7 +8,7 @@ import TokenDetails from "./TokenDetails";
 
 const NFT = () => {
   return (
-    <div className=" w-full xl:w-[calc(80%-20px)] h-full flex gap-5">
+    <div className=" w-full xl:w-[calc(80%-20px)] h-full flex gap-1">
       <div className="p-2  overflow-x-hidden overflow-y-auto rounded-[7px]   lg:pt-0   flex-1 flex flex-col relative z-10 will-change-transform justify-start h-[calc(100vh-40px)]  w-full xl:w-[calc(53%-20px)]">
         <Header />
         <div className=" h-full   space-y-5">

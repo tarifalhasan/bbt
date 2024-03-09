@@ -9,7 +9,7 @@ export default function Home() {
   const { headerTab, setHeader } = useClient();
   return (
     <main className=" h-screen flex justify-center items-center ">
-      <div className="flex w-full  justify-center   overflow-hidden p-0  h-[calc(100vh-40px)] items-start gap-5">
+      <div className="flex w-full  justify-center   overflow-hidden p-0  h-[calc(100vh-40px)] items-start gap-1">
         <Sidebar />
         {headerTab === "dex" ? (
           <DEX />

@@ -5,9 +5,10 @@ import Image from "next/image";
 import DexCalculator from "./DexCalculator";
 import DexProfileCard from "./DexProfileCard";
 import DexTransactions from "./DexTransactions";
+import TopGainers from "./TopGainers";
 const DEX = () => {
   return (
-    <div className=" w-full xl:w-[calc(80%-20px)] h-full flex gap-5">
+    <div className=" w-full xl:w-[calc(80%-20px)] h-full flex gap-1">
       <div className="p-2  overflow-x-hidden overflow-y-auto rounded-[7px]   lg:pt-0   flex-1 flex flex-col relative z-10 will-change-transform justify-start h-[calc(100vh-40px)]  w-full xl:w-[calc(53%-20px)]">
         <Header />
         <div className=" space-y-5">
@@ -22,6 +23,7 @@ const DEX = () => {
         <div className=" overflow-y-auto space-y-3">
           <Input placeholder="Search" />
           <DexProfileCard />
+          <TopGainers />
         </div>
       </aside>
     </div>

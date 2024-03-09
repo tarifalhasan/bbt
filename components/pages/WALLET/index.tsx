@@ -29,14 +29,50 @@ const WALLET = () => {
       details: {
         network: "Arbitrum",
         description: "This scammer is making 0.1 BRR daily",
+        username: "thanoscock.eth",
+        tokenName: "ENS: Ethereum Name Service",
+        nftImage: "/images/73.png",
+      },
+    },
+    {
+      attributes: {
+        pendingRewards: "0 BRR",
+        createdDate: "1684731359000",
+        length: "19",
+        registrationDate: "1684731359000",
+        expirationDate: "1716267359000",
+        namewrapperState: "Emancipated",
+        namewrapperExpiryDate: "1724043359000",
+      },
+      details: {
+        network: "Arbitrum",
+        description: "This scammer is making 0.1 BRR daily",
         username: "Sifu: peepoo",
         tokenName: "BRR Scammers NFT",
         nftImage: "/images/nft2.png",
       },
     },
+    {
+      attributes: {
+        pendingRewards: "0 BRR",
+        createdDate: "1684731359000",
+        length: "19",
+        registrationDate: "1684731359000",
+        expirationDate: "1716267359000",
+        namewrapperState: "Emancipated",
+        namewrapperExpiryDate: "1724043359000",
+      },
+      details: {
+        network: "Arbitrum",
+        description: "This scammer is making 0.1 BRR daily",
+        username: "thanoscock.eth",
+        tokenName: "ENS: Ethereum Name Service",
+        nftImage: "/images/57.png",
+      },
+    },
   ];
   return (
-    <div className="w-full xl:w-[calc(80%-20px)] h-full flex gap-5">
+    <div className="w-full xl:w-[calc(80%-20px)] h-full flex gap-1">
       <div className="p-2  overflow-x-hidden overflow-y-auto rounded-[7px]   lg:pt-0   flex-1 flex flex-col relative z-10 will-change-transform justify-start h-[calc(100vh-40px)]  w-full xl:w-[calc(53%-20px)]">
         <Header />
         <div className=" h-full   space-y-5">
