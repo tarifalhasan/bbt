@@ -1,6 +1,7 @@
 import Header from "@/components/layout/Header";
 import graph from "@/public/images/dex_graph.webp";
 import Image from "next/image";
+import DexCalculator from "./DexCalculator";
 import DexTransactions from "./DexTransactions";
 const DEX = () => {
   return (
@@ -12,6 +13,7 @@ const DEX = () => {
             <Image className="w-full" src={graph} alt="dex graph" />
           </div>
           <DexTransactions />
+          <DexCalculator />
         </div>
       </div>
       <aside className="flex-col p-4 rounded-[7px] justify-between right-0 left-0 top-0 overflow-hidden overflow-y-auto bg-card max-w-[280px]  relative w-[calc(27%-20px)] z-50 h-full hidden xl:flex">
