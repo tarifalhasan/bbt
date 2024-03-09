@@ -68,7 +68,7 @@ const WalletAssets = () => {
         <h2 className=" text-lg xl:text-2xl font-semibold">Assets</h2>
       </div>
       <Table>
-        <TableHeader>
+        <TableHeader className="[&_tr]:border-b-0">
           <TableRow>
             {THEAD.map((th, i) => (
               <TableHead className="text-sm text-gray font-semibold" key={i}>
@@ -79,7 +79,7 @@ const WalletAssets = () => {
         </TableHeader>
         <TableBody>
           {dummyData.map((item, index) => (
-            <TableRow key={index}>
+            <TableRow className="odd:bg-light_gray border-b-0" key={index}>
               <TableCell className=" w-3">
                 <HiOutlineMenu />
               </TableCell>

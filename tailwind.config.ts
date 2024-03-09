@@ -56,6 +56,7 @@ const config = {
         lose: "hsla(var(--lose))",
         gray: "hsla(var(--gray))",
         green: "hsla(var(--green))",
+        light_gray: "hsla(var(--light-gray))",
       },
       borderRadius: {
         lg: "var(--radius)",
